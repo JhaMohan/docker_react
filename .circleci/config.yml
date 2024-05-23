@@ -7,8 +7,3 @@ jobs:
       - run: |
           docker build -t mohanaditya/docker_react -f Dockerfile.dev .
           docker run mohanaditya/docker_react npm run test -- --coverage
-
-workflows:
-  my-custom-workflow:
-    jobs:
-      - my-job-name
