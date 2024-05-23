@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - dokcer build -t mohanaditya/docker_react -f Dockerfile.dev .
+
+script:
+  - docker run mohanaditya/docker_react npm run test -- --coverage
