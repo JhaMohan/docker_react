@@ -1,7 +1,8 @@
 version: 2.1
 jobs:
-  my-job-name:
-    executor: my-custom-executor
+  build:
+    docker:
+      - image: cimg/base:2023.03
     steps:
       - checkout
       - run: |
